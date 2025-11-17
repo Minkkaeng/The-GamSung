@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The GamSung · 로그인</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header class="hs-header">
+        <div class="hs-top">
+          <a class="hs-logo" href="./index.html">
+            <img src="./img/logo/logo (3).png" alt="The GamSung 로고" />
+          </a>
+
+          <form class="hs-search" role="search">
+            <input type="search" placeholder="검색어를 입력하세요" />
+            <button type="submit">검색</button>
+          </form>
+
+          <nav class="hs-utils">
+            <span data-auth="guest">
+              <a href="./login.html">로그인</a>
+              <a href="./signup.html">회원가입</a>
+            </span>
+            <span data-auth="user" class="hide">
+              <a href="./mypage.html">마이페이지</a>
+              <button id="logout-btn" class="linklike">로그아웃</button>
+            </span>
+          </nav>
+        </div>
+
+        <nav class="hs-gnb">
+          <ul class="hs-gnb-list">
+            <li><a href="./homefurnishing.html">홈퍼니싱</a></li>
+            <li><a href="./remodeling.html">리모델링</a></li>
+            <li><a href="./experts.html">전문가 찾기</a></li>
+            <li><a href="./shop.html">가구상점</a></li>
+            <li><a href="./help.html">고객센터</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="auth-container">
+
+        <div class="auth-logo">
+          <img src="./img/logo/logo (4).png" alt="더 감성 로고" />
+        </div>
+
+        <section class="auth-panel auth-login">
+          <div class="auth-header">
+            <h1>로그인</h1>
+            <p>더 감성의 서비스를 이용하려면 로그인하세요.</p>
+          </div>
+
+          <form class="auth-form" id="login-form">
+            <div class="auth-grid">
+              <div class="auth-field">
+                <label>이메일</label>
+                <input type="email" required />
+              </div>
+
+              <div class="auth-field">
+                <label>비밀번호</label>
+                <input type="password" required />
+              </div>
+            </div>
+
+            <div class="auth-row">
+              <label class="auth-check">
+                <input type="checkbox" />
+                <span>로그인 상태 유지</span>
+              </label>
+              <a class="auth-link" href="#">비밀번호 찾기</a>
+            </div>
+
+            <button type="submit" class="auth-btn primary">로그인</button>
+
+            <p class="auth-subtext">
+              아직 회원이 아니신가요?
+              <a href="./signup.html" class="auth-link">회원가입</a>
+            </p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const loginForm = document.getElementById("login-form");
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        localStorage.setItem("auth", "1");
+        alert("로그인 되었습니다.");
+        location.href = "./index.html";
+      });
+
+      const authed = localStorage.getItem("auth") === "1";
+      document.querySelector('[data-auth="guest"]').classList.toggle("hide", authed);
+      document.querySelector('[data-auth="user"]').classList.toggle("hide", !authed);
+    </script>
+  </body>
+</html>

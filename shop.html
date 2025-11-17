@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The GamSung · 가구상점</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/shop.css" />
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header class="hs-header">
+        <div class="hs-top">
+          <a class="hs-logo" href="./index.html">
+            <img src="./img/logo/logo (4).png" alt="The GamSung 로고" />
+          </a>
+
+          <form class="hs-search" action="/search" role="search">
+            <input
+              type="search"
+              name="q"
+              placeholder="검색어를 입력하세요"
+              aria-label="검색"
+            />
+            <button type="submit" aria-label="검색">검색</button>
+          </form>
+
+          <nav class="hs-utils" aria-label="로그인 영역">
+            <span data-auth="guest">
+              <a href="./login.html">로그인</a>
+              <a href="./signup.html">회원가입</a>
+            </span>
+            <span data-auth="user" class="hide">
+              <a href="/mypage">마이페이지</a>
+              <button
+                type="button"
+                id="logout-btn"
+                class="linklike"
+              >
+                로그아웃
+              </button>
+            </span>
+          </nav>
+        </div>
+
+        <nav class="hs-gnb" aria-label="주요 카테고리">
+          <ul class="hs-gnb-list">
+            <li><a href="./homefurnishing.html">홈퍼니싱</a></li>
+            <li><a href="./remodeling.html">리모델링</a></li>
+            <li><a href="./experts.html">전문가 찾기</a></li>
+            <li class="is-active"><a href="./shop.html">가구상점</a></li>
+            <li><a href="./help.html">고객센터</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- 메인 시작 -->
+      <main class="shop-container">
+        <!-- HERO -->
+        <section class="shop-hero">
+          <img
+            src="./img/imgs/digin/v1-352017409515648.avif" alt="가구상점 배너" />
+          <div class="shop-hero-text">
+            <h1>가구상점</h1>
+            <p>테라코타와 딥그린으로 완성하는 감성 가구 셀렉션</p>
+          </div>
+        </section>
+
+        <!-- TOOLBAR -->
+        <section class="shop-toolbar">
+          <div class="shop-filters">
+            <button class="shop-chip is-active">전체</button>
+            <button class="shop-chip">소파</button>
+            <button class="shop-chip">체어</button>
+            <button class="shop-chip">테이블</button>
+            <button class="shop-chip">수납장</button>
+            <button class="shop-chip">침대</button>
+          </div>
+
+          <div class="shop-sort">
+            <label>
+              <span>정렬</span>
+              <select>
+                <option value="popular">인기순</option>
+                <option value="new">신상품순</option>
+                <option value="low">낮은 가격순</option>
+                <option value="high">높은 가격순</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <!-- GRID -->
+        <section class="shop-grid" aria-label="가구 상품 목록">
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (24).jpg" alt="소파 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">테라코타 패브릭 소파 3인</h3>
+              <p class="shop-meta">딥그린 쿠션 포함 · 커버 분리 세탁</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩890,000</span>
+                <span class="shop-tag">오늘출발</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (18).jpg" alt="체어 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">우드 프레임 라운지 체어</h3>
+              <p class="shop-meta">오크 원목 · 로우 라운지 스타일</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩259,000</span>
+                <span class="shop-tag">베스트셀러</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (9).jpg" alt="테이블 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">내추럴 우드 다이닝 테이블</h3>
+              <p class="shop-meta">4인용 · 확장형 상판 옵션</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩590,000</span>
+                <span class="shop-tag">한정수량</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (11).jpg" alt="수납장 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">그린 포인트 수납장</h3>
+              <p class="shop-meta">도어 컬러 선택 · 소프트 클로징</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩349,000</span>
+                <span class="shop-tag">신상품</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (13).jpg" alt="침대 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">로우 플랫폼 침대 프레임</h3>
+              <p class="shop-meta">퀸 사이즈 · 헤드보드 조명 옵션</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩690,000</span>
+                <span class="shop-tag">무료배송</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (15).jpg" alt="소파 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">라운드 코너 소파 세트</h3>
+              <p class="shop-meta">모듈형 구성 · 패브릭/레더 선택</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩1,290,000</span>
+                <span class="shop-tag">예약판매</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (17).jpg" alt="체어 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">딥그린 카페 체어</h3>
+              <p class="shop-meta">스틸 프레임 · 스택 가능</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩129,000</span>
+                <span class="shop-tag">인기</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (19).jpg" alt="사이드 테이블 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">라운드 사이드 테이블</h3>
+              <p class="shop-meta">소파 옆 포인트 테이블</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩89,000</span>
+                <span class="shop-tag">소량입고</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (21).jpg" alt="서랍장 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">테라코타 서랍장</h3>
+              <p class="shop-meta">침실·거실 겸용 수납</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩379,000</span>
+                <span class="shop-tag">한정컬러</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="shop-thumb">
+              <img src="./img/imgs/interior (23).jpg" alt="벤치 이미지" />
+            </div>
+            <div class="shop-info">
+              <h3 class="shop-title">우드 벤치 체어</h3>
+              <p class="shop-meta">현관·다이닝 겸용 벤치</p>
+              <div class="shop-bottom">
+                <span class="shop-price">₩219,000</span>
+                <span class="shop-tag">추천</span>
+              </div>
+            </div>
+          </article>
+
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const authed = localStorage.getItem("auth") === "1";
+      const guest = document.querySelector('[data-auth="guest"]');
+      const user = document.querySelector('[data-auth="user"]');
+      if (guest && user) {
+        guest.classList.toggle("hide", authed);
+        user.classList.toggle("hide", !authed);
+      }
+      const logoutBtn = document.getElementById("logout-btn");
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+          localStorage.removeItem("auth");
+          location.reload();
+        });
+      }
+    </script>
+  </body>
+</html>
