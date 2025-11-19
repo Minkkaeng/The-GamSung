@@ -109,12 +109,6 @@
   color: #fff;
 }
 
-.hs-gnb-list .is-active > a {
-  background: rgba(216, 189, 181, 0.492);
-  border-radius: 8px;
-  padding: 4px 10px;
-}
-
 .content {
   flex: 1 1 auto;
   overflow: auto;
