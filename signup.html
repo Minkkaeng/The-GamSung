@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The GamSung · 회원가입</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header class="hs-header">
+        <div class="hs-top">
+          <a class="hs-logo" href="./index.html">
+            <img src="./img/logo/logo (3).png" alt="로고" />
+          </a>
+
+          <form class="hs-search" role="search">
+            <input type="search" placeholder="검색어를 입력하세요" />
+            <button type="submit">검색</button>
+          </form>
+
+          <nav class="hs-utils">
+            <span data-auth="guest">
+              <a href="./login.html">로그인</a>
+              <a href="./signup.html">회원가입</a>
+            </span>
+            <span data-auth="user" class="hide">
+              <a href="./mypage.html">마이페이지</a>
+              <button id="logout-btn" class="linklike">로그아웃</button>
+            </span>
+          </nav>
+        </div>
+
+        <nav class="hs-gnb">
+          <ul class="hs-gnb-list">
+            <li><a href="./homefurnishing.html">홈퍼니싱</a></li>
+            <li><a href="./remodeling.html">리모델링</a></li>
+            <li><a href="./experts.html">전문가 찾기</a></li>
+            <li><a href="./shop.html">가구상점</a></li>
+            <li><a href="./help.html">고객센터</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="auth-container">
+        <div class="auth-logo">
+          <img src="./img/logo/logo (4).png" alt="로고" />
+        </div>
+
+        <section class="auth-panel auth-signup">
+          <div class="auth-header">
+            <h1>회원가입</h1>
+            <p>한 번의 가입으로 모든 서비스를 이용할 수 있습니다.</p>
+          </div>
+
+          <form class="auth-form" id="signup-form">
+            <div class="auth-grid">
+              <div class="auth-field">
+                <label>이름</label>
+                <input type="text" required />
+              </div>
+
+              <div class="auth-field">
+                <label>이메일</label>
+                <input type="email" required />
+              </div>
+
+              <div class="auth-field">
+                <label>비밀번호</label>
+                <input type="password" id="pw1" required minlength="8" />
+              </div>
+
+              <div class="auth-field">
+                <label>비밀번호 확인</label>
+                <input type="password" id="pw2" required minlength="8" />
+              </div>
+
+              <div class="auth-field">
+                <label>연락처 (선택)</label>
+                <input type="tel" />
+              </div>
+
+              <div class="auth-field">
+                <label>지역 (선택)</label>
+                <select>
+                  <option value="">선택 안 함</option>
+                  <option>서울</option>
+                  <option>경기</option>
+                  <option>부산</option>
+                  <option>대구</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="auth-box">
+              <p class="auth-box-title">약관 동의</p>
+
+              <label class="auth-check">
+                <input type="checkbox" id="terms-all" />
+                <span>전체 동의</span>
+              </label>
+
+              <div class="auth-check-group">
+                <label class="auth-check">
+                  <input type="checkbox" name="terms" required />
+                  <span>[필수] 서비스 이용약관</span>
+                </label>
+
+                <label class="auth-check">
+                  <input type="checkbox" name="terms" required />
+                  <span>[필수] 개인정보 처리방침</span>
+                </label>
+
+                <label class="auth-check">
+                  <input type="checkbox" name="terms" />
+                  <span>[선택] 마케팅 수신 동의</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="auth-btn primary">가입 완료</button>
+
+            <p class="auth-subtext">
+              이미 가입하셨나요?
+              <a href="./login.html" class="auth-link">로그인</a>
+            </p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const signupForm = document.getElementById("signup-form");
+
+      signupForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (pw1.value !== pw2.value) {
+          alert("비밀번호가 일치하지 않습니다.");
+          return;
+        }
+        localStorage.setItem("auth", "1");
+        alert("회원가입 완료!");
+        location.href = "./index.html";
+      });
+
+      const termsAll = document.getElementById("terms-all");
+      const terms = document.querySelectorAll('input[name="terms"]');
+
+      termsAll.addEventListener("change", () => {
+        terms.forEach((c) => (c.checked = termsAll.checked));
+      });
+
+      terms.forEach((c) => {
+        c.addEventListener("change", () => {
+          termsAll.checked = [...terms].every((t) => t.checked);
+        });
+      });
+
+      const authed = localStorage.getItem("auth") === "1";
+      document.querySelector('[data-auth="guest"]').classList.toggle("hide", authed);
+      document.querySelector('[data-auth="user"]').classList.toggle("hide", !authed);
+    </script>
+  </body>
+</html>

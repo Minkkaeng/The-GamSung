@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The GamSung · 마이페이지</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/mypage.css" />
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header class="hs-header">
+        <div class="hs-top">
+          <a class="hs-logo" href="./index.html">
+            <img src="./img/logo/logo (4).png" alt="The GamSung 로고" />
+          </a>
+
+          <form class="hs-search" action="/search" role="search">
+            <input type="search" name="q" placeholder="검색어를 입력하세요" aria-label="검색" />
+            <button type="submit" aria-label="검색">검색</button>
+          </form>
+
+          <nav class="hs-utils" aria-label="로그인 영역">
+            <span data-auth="guest">
+              <a href="./login.html">로그인</a>
+              <a href="./signup.html">회원가입</a>
+            </span>
+            <span data-auth="user" class="hide">
+              <a href="./mypage.html">마이페이지</a>
+              <button type="button" id="logout-btn" class="linklike">로그아웃</button>
+            </span>
+          </nav>
+        </div>
+
+        <nav class="hs-gnb" aria-label="주요 카테고리">
+          <ul class="hs-gnb-list">
+            <li><a href="./homefurnishing.html">홈퍼니싱</a></li>
+            <li><a href="./remodeling.html">리모델링</a></li>
+            <li><a href="./experts.html">전문가 찾기</a></li>
+            <li><a href="./shop.html">가구상점</a></li>
+            <li><a href="./help.html">고객센터</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="mypage-container">
+        <section class="mypage-layout">
+          <aside class="mypage-sidebar">
+            <div class="mypage-profile">
+              <div class="mypage-avatar">
+                <span>IK</span>
+              </div>
+              <div class="mypage-profile-text">
+                <p class="mypage-name">이깡님</p>
+                <p class="mypage-meta">오늘도 감성 채우는 중</p>
+              </div>
+            </div>
+
+            <ul class="mypage-menu">
+              <li class="is-active"><button type="button">대시보드</button></li>
+              <li><button type="button">저장한 공간</button></li>
+              <li><button type="button">견적 내역</button></li>
+              <li><button type="button">전문가 상담</button></li>
+              <li><button type="button">계정 설정</button></li>
+            </ul>
+          </aside>
+
+          <section class="mypage-main">
+            <header class="mypage-main-header">
+              <h1>마이페이지</h1>
+              <p>최근에 살펴본 홈퍼니싱, 리모델링, 전문가 상담 기록을 한 번에 모아봤어요.</p>
+            </header>
+
+            <div class="mypage-grid">
+              <section class="mypage-card">
+                <div class="mypage-card-header">
+                  <h2>최근 본 공간</h2>
+                  <a href="./homefurnishing.html">홈퍼니싱 바로가기</a>
+                </div>
+                <ul class="mypage-list">
+                  <li>
+                    <p class="mypage-list-title">테라코타 포인트 거실 패키지</p>
+                    <p class="mypage-list-meta">기본 견적 ₩2,300,000 · 홈퍼니싱</p>
+                  </li>
+                  <li>
+                    <p class="mypage-list-title">내추럴 우드 침실 스타일링</p>
+                    <p class="mypage-list-meta">기본 견적 ₩1,580,000 · 홈퍼니싱</p>
+                  </li>
+                  <li>
+                    <p class="mypage-list-title">딥그린 포인트 주방 리모델링</p>
+                    <p class="mypage-list-meta">기본 견적 ₩4,200,000 · 리모델링</p>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="mypage-card">
+                <div class="mypage-card-header">
+                  <h2>진행 중인 상담</h2>
+                  <a href="./experts.html">전문가 찾기</a>
+                </div>
+                <ul class="mypage-list">
+                  <li>
+                    <p class="mypage-list-title">김지훈 디자이너와 거실 리모델링 상담</p>
+                    <p class="mypage-list-meta">상태: 일정 조율 중 · 상담 방식: 방문 상담</p>
+                  </li>
+                  <li>
+                    <p class="mypage-list-title">박서연 스타일리스트 홈퍼니싱 컨셉 제안</p>
+                    <p class="mypage-list-meta">상태: 제안서 검토 중 · 상담 방식: 온라인</p>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="mypage-card">
+                <div class="mypage-card-header">
+                  <h2>가구 위시리스트</h2>
+                  <a href="./shop.html">가구상점</a>
+                </div>
+                <ul class="mypage-list">
+                  <li>
+                    <p class="mypage-list-title">테라코타 패브릭 소파 3인</p>
+                    <p class="mypage-list-meta">₩890,000 · 오늘출발</p>
+                  </li>
+                  <li>
+                    <p class="mypage-list-title">내추럴 우드 다이닝 테이블</p>
+                    <p class="mypage-list-meta">₩590,000 · 한정수량</p>
+                  </li>
+                  <li>
+                    <p class="mypage-list-title">그린 포인트 수납장</p>
+                    <p class="mypage-list-meta">₩349,000 · 신상품</p>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="mypage-card">
+                <div class="mypage-card-header">
+                  <h2>알림</h2>
+                </div>
+                <ul class="mypage-list">
+                  <li>
+                    <p class="mypage-list-title">이번 주 리모델링 상담 가능 일정이 업데이트 되었어요.</p>
+                    <p class="mypage-list-meta">오늘 · 전문가 찾기</p>
+                  </li>
+                  <li>
+                    <p class="mypage-list-title">가구상점 테라코타 컬렉션 한정 수량 입고 완료.</p>
+                    <p class="mypage-list-meta">어제 · 가구상점</p>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      if (localStorage.getItem("auth") !== "1") {
+        alert("로그인이 필요합니다.");
+        location.href = "./login.html";
+      }
+
+      const guest = document.querySelector('[data-auth="guest"]');
+      const user = document.querySelector('[data-auth="user"]');
+      const authed = localStorage.getItem("auth") === "1";
+
+      if (guest && user) {
+        guest.classList.toggle("hide", authed);
+        user.classList.toggle("hide", !authed);
+      }
+
+      const logoutBtn = document.getElementById("logout-btn");
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+          localStorage.removeItem("auth");
+          alert("로그아웃 되었습니다.");
+          location.href = "./index.html";
+        });
+      }
+    </script>
+  </body>
+</html>
