@@ -11,6 +11,7 @@
 
   <body>
     <div id="wrap">
+      <!-- ================= 헤더 ================= -->
       <header class="hs-header">
         <div class="hs-top">
           <a class="hs-logo" href="./index.html">
@@ -45,121 +46,289 @@
         </nav>
       </header>
 
+      <!-- ================= 메인 ================= -->
       <main class="mypage-container">
-        <section class="mypage-layout">
-          <aside class="mypage-sidebar">
-            <div class="mypage-profile">
-              <div class="mypage-avatar">
-                <span>IK</span>
-              </div>
-              <div class="mypage-profile-text">
-                <p class="mypage-name">이깡님</p>
-                <p class="mypage-meta">오늘도 감성 채우는 중</p>
-              </div>
+        <div class="mypage-inner">
+          <!-- 요약 카드 -->
+          <section class="mypage-summary">
+            <div class="mypage-summary-card">
+              <p class="summary-label">회원 등급</p>
+              <p class="summary-value">Warm Terracotta</p>
+              <p class="summary-sub">감성 지수 상위 12%</p>
             </div>
-
-            <ul class="mypage-menu">
-              <li class="is-active"><button type="button">대시보드</button></li>
-              <li><button type="button">저장한 공간</button></li>
-              <li><button type="button">견적 내역</button></li>
-              <li><button type="button">전문가 상담</button></li>
-              <li><button type="button">계정 설정</button></li>
-            </ul>
-          </aside>
-
-          <section class="mypage-main">
-            <header class="mypage-main-header">
-              <h1>마이페이지</h1>
-              <p>최근에 살펴본 홈퍼니싱, 리모델링, 전문가 상담 기록을 한 번에 모아봤어요.</p>
-            </header>
-
-            <div class="mypage-grid">
-              <section class="mypage-card">
-                <div class="mypage-card-header">
-                  <h2>최근 본 공간</h2>
-                  <a href="./homefurnishing.html">홈퍼니싱 바로가기</a>
-                </div>
-                <ul class="mypage-list">
-                  <li>
-                    <p class="mypage-list-title">테라코타 포인트 거실 패키지</p>
-                    <p class="mypage-list-meta">기본 견적 ₩2,300,000 · 홈퍼니싱</p>
-                  </li>
-                  <li>
-                    <p class="mypage-list-title">내추럴 우드 침실 스타일링</p>
-                    <p class="mypage-list-meta">기본 견적 ₩1,580,000 · 홈퍼니싱</p>
-                  </li>
-                  <li>
-                    <p class="mypage-list-title">딥그린 포인트 주방 리모델링</p>
-                    <p class="mypage-list-meta">기본 견적 ₩4,200,000 · 리모델링</p>
-                  </li>
-                </ul>
-              </section>
-
-              <section class="mypage-card">
-                <div class="mypage-card-header">
-                  <h2>진행 중인 상담</h2>
-                  <a href="./experts.html">전문가 찾기</a>
-                </div>
-                <ul class="mypage-list">
-                  <li>
-                    <p class="mypage-list-title">김지훈 디자이너와 거실 리모델링 상담</p>
-                    <p class="mypage-list-meta">상태: 일정 조율 중 · 상담 방식: 방문 상담</p>
-                  </li>
-                  <li>
-                    <p class="mypage-list-title">박서연 스타일리스트 홈퍼니싱 컨셉 제안</p>
-                    <p class="mypage-list-meta">상태: 제안서 검토 중 · 상담 방식: 온라인</p>
-                  </li>
-                </ul>
-              </section>
-
-              <section class="mypage-card">
-                <div class="mypage-card-header">
-                  <h2>가구 위시리스트</h2>
-                  <a href="./shop.html">가구상점</a>
-                </div>
-                <ul class="mypage-list">
-                  <li>
-                    <p class="mypage-list-title">테라코타 패브릭 소파 3인</p>
-                    <p class="mypage-list-meta">₩890,000 · 오늘출발</p>
-                  </li>
-                  <li>
-                    <p class="mypage-list-title">내추럴 우드 다이닝 테이블</p>
-                    <p class="mypage-list-meta">₩590,000 · 한정수량</p>
-                  </li>
-                  <li>
-                    <p class="mypage-list-title">그린 포인트 수납장</p>
-                    <p class="mypage-list-meta">₩349,000 · 신상품</p>
-                  </li>
-                </ul>
-              </section>
-
-              <section class="mypage-card">
-                <div class="mypage-card-header">
-                  <h2>알림</h2>
-                </div>
-                <ul class="mypage-list">
-                  <li>
-                    <p class="mypage-list-title">이번 주 리모델링 상담 가능 일정이 업데이트 되었어요.</p>
-                    <p class="mypage-list-meta">오늘 · 전문가 찾기</p>
-                  </li>
-                  <li>
-                    <p class="mypage-list-title">가구상점 테라코타 컬렉션 한정 수량 입고 완료.</p>
-                    <p class="mypage-list-meta">어제 · 가구상점</p>
-                  </li>
-                </ul>
-              </section>
+            <div class="mypage-summary-card">
+              <p class="summary-label">적립 포인트</p>
+              <p class="summary-value">25,300P</p>
+              <p class="summary-sub">가구상점 주문 시 사용 가능</p>
+            </div>
+            <div class="mypage-summary-card">
+              <p class="summary-label">진행 중 상담</p>
+              <p class="summary-value">2건</p>
+              <p class="summary-sub">이번 주 방문 상담 1건 예정</p>
             </div>
           </section>
-        </section>
+
+          <!-- 본문 레이아웃 -->
+          <section class="mypage-layout">
+            <!-- 사이드바 -->
+            <aside class="mypage-sidebar">
+              <div class="mypage-profile">
+                <div class="mypage-avatar">
+                  <span>IK</span>
+                </div>
+                <div class="mypage-profile-text">
+                  <p class="mypage-name">이깡님</p>
+                  <p class="mypage-meta">오늘도 감성 채우는 중</p>
+                </div>
+              </div>
+
+              <ul class="mypage-menu">
+                <li class="is-active" data-target="dashboard">
+                  <button type="button">대시보드</button>
+                </li>
+                <li data-target="saved">
+                  <button type="button">저장한 공간</button>
+                </li>
+                <li data-target="estimate">
+                  <button type="button">견적 내역</button>
+                </li>
+                <li data-target="consult">
+                  <button type="button">전문가 상담</button>
+                </li>
+                <li data-target="account">
+                  <button type="button">계정 설정</button>
+                </li>
+              </ul>
+            </aside>
+
+            <!-- 메인 -->
+            <section class="mypage-main">
+              <header class="mypage-main-header">
+                <h1>마이페이지</h1>
+                <p>최근에 살펴본 홈퍼니싱, 리모델링, 전문가 상담 기록을 한 번에 모아봤어요.</p>
+              </header>
+
+              <!-- 패널: 대시보드 -->
+              <div class="mypage-panel is-active" data-panel="dashboard">
+                <div class="mypage-grid">
+                  <section class="mypage-card">
+                    <div class="mypage-card-header">
+                      <h2>최근 본 공간</h2>
+                      <a href="./homefurnishing.html">홈퍼니싱 바로가기</a>
+                    </div>
+                    <ul class="mypage-list">
+                      <li>
+                        <p class="mypage-list-title">테라코타 포인트 거실 패키지</p>
+                        <p class="mypage-list-meta">기본 견적 ₩2,300,000 · 홈퍼니싱</p>
+                      </li>
+                      <li>
+                        <p class="mypage-list-title">내추럴 우드 침실 스타일링</p>
+                        <p class="mypage-list-meta">기본 견적 ₩1,580,000 · 홈퍼니싱</p>
+                      </li>
+                      <li>
+                        <p class="mypage-list-title">딥그린 포인트 주방 리모델링</p>
+                        <p class="mypage-list-meta">기본 견적 ₩4,200,000 · 리모델링</p>
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section class="mypage-card">
+                    <div class="mypage-card-header">
+                      <h2>진행 중인 상담</h2>
+                      <a href="./experts.html">전문가 찾기</a>
+                    </div>
+                    <ul class="mypage-list">
+                      <li>
+                        <p class="mypage-list-title">김지훈 디자이너와 거실 리모델링 상담</p>
+                        <p class="mypage-list-meta">상태: 일정 조율 중 · 상담 방식: 방문 상담</p>
+                      </li>
+                      <li>
+                        <p class="mypage-list-title">박서연 스타일리스트 홈퍼니싱 컨셉 제안</p>
+                        <p class="mypage-list-meta">상태: 제안서 검토 중 · 상담 방식: 온라인</p>
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section class="mypage-card">
+                    <div class="mypage-card-header">
+                      <h2>가구 위시리스트</h2>
+                      <a href="./shop.html">가구상점</a>
+                    </div>
+                    <ul class="mypage-list">
+                      <li>
+                        <p class="mypage-list-title">테라코타 패브릭 소파 3인</p>
+                        <p class="mypage-list-meta">₩890,000 · 오늘출발</p>
+                      </li>
+                      <li>
+                        <p class="mypage-list-title">내추럴 우드 다이닝 테이블</p>
+                        <p class="mypage-list-meta">₩590,000 · 한정수량</p>
+                      </li>
+                      <li>
+                        <p class="mypage-list-title">그린 포인트 수납장</p>
+                        <p class="mypage-list-meta">₩349,000 · 신상품</p>
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section class="mypage-card">
+                    <div class="mypage-card-header">
+                      <h2>알림</h2>
+                    </div>
+                    <ul class="mypage-list">
+                      <li>
+                        <p class="mypage-list-title">이번 주 리모델링 상담 가능 일정이 업데이트 되었어요.</p>
+                        <p class="mypage-list-meta">오늘 · 전문가 찾기</p>
+                      </li>
+                      <li>
+                        <p class="mypage-list-title">가구상점 테라코타 컬렉션 한정 수량 입고 완료.</p>
+                        <p class="mypage-list-meta">어제 · 가구상점</p>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+
+              <!-- 패널: 저장한 공간 -->
+              <div class="mypage-panel" data-panel="saved">
+                <section class="mypage-card full">
+                  <div class="mypage-card-header">
+                    <h2>저장한 공간</h2>
+                    <a href="./homefurnishing.html">홈퍼니싱 전체 보기</a>
+                  </div>
+                  <ul class="mypage-list mypage-action-list">
+                    <li class="mypage-item-with-action">
+                      <div class="mypage-item-text">
+                        <p class="mypage-list-title">톤온톤 베이지 거실 패키지</p>
+                        <p class="mypage-list-meta">저장일: 2025.02.12 · 홈퍼니싱</p>
+                      </div>
+                      <button type="button" class="mypage-detail-btn" data-category="저장한 공간">자세히</button>
+                    </li>
+                    <li class="mypage-item-with-action">
+                      <div class="mypage-item-text">
+                        <p class="mypage-list-title">내추럴 우드 키친 스타일링</p>
+                        <p class="mypage-list-meta">저장일: 2025.02.02 · 리모델링</p>
+                      </div>
+                      <button type="button" class="mypage-detail-btn" data-category="저장한 공간">자세히</button>
+                    </li>
+                    <li class="mypage-item-with-action">
+                      <div class="mypage-item-text">
+                        <p class="mypage-list-title">딥그린 포인트 침실 컨셉</p>
+                        <p class="mypage-list-meta">저장일: 2025.01.28 · 홈퍼니싱</p>
+                      </div>
+                      <button type="button" class="mypage-detail-btn" data-category="저장한 공간">자세히</button>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <!-- 패널: 견적 내역 -->
+              <div class="mypage-panel" data-panel="estimate">
+                <section class="mypage-card full">
+                  <div class="mypage-card-header">
+                    <h2>견적 내역</h2>
+                    <a href="./remodeling.html">리모델링 바로가기</a>
+                  </div>
+                  <ul class="mypage-list mypage-action-list">
+                    <li class="mypage-item-with-action">
+                      <div class="mypage-item-text">
+                        <p class="mypage-list-title">거실+주방 리모델링 패키지</p>
+                        <p class="mypage-list-meta">견적 ₩12,300,000 · 상태: 검토 중</p>
+                      </div>
+                      <button type="button" class="mypage-detail-btn" data-category="견적 내역">자세히</button>
+                    </li>
+                    <li class="mypage-item-with-action">
+                      <div class="mypage-item-text">
+                        <p class="mypage-list-title">침실 홈퍼니싱 패키지</p>
+                        <p class="mypage-list-meta">견적 ₩2,100,000 · 상태: 상담 예정</p>
+                      </div>
+                      <button type="button" class="mypage-detail-btn" data-category="견적 내역">자세히</button>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <!-- 패널: 전문가 상담 -->
+              <div class="mypage-panel" data-panel="consult">
+                <section class="mypage-card full">
+                  <div class="mypage-card-header">
+                    <h2>전문가 상담 내역</h2>
+                    <a href="./experts.html">전문가 리스트</a>
+                  </div>
+                  <ul class="mypage-list mypage-action-list">
+                    <li class="mypage-item-with-action">
+                      <div class="mypage-item-text">
+                        <p class="mypage-list-title">거실 리모델링 1차 컨설팅</p>
+                        <p class="mypage-list-meta">상담일: 2025.02.05 · 결과: 도면 제안 완료</p>
+                      </div>
+                      <button type="button" class="mypage-detail-btn" data-category="전문가 상담">자세히</button>
+                    </li>
+                    <li class="mypage-item-with-action">
+                      <div class="mypage-item-text">
+                        <p class="mypage-list-title">홈퍼니싱 스타일 제안</p>
+                        <p class="mypage-list-meta">상담일: 2025.01.20 · 결과: 스타일 가이드 전달</p>
+                      </div>
+                      <button type="button" class="mypage-detail-btn" data-category="전문가 상담">자세히</button>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <!-- 패널: 계정 설정 -->
+              <div class="mypage-panel" data-panel="account">
+                <section class="mypage-card full">
+                  <div class="mypage-card-header">
+                    <h2>계정 설정</h2>
+                    <button type="button" class="mypage-edit-all-btn">전체 수정</button>
+                  </div>
+                  <ul class="mypage-list mypage-settings-list">
+                    <li class="mypage-settings-item">
+                      <div class="mypage-settings-text">
+                        <p class="mypage-list-title">기본 정보</p>
+                        <p class="mypage-list-meta">이름, 연락처, 주소 관리</p>
+                      </div>
+                    </li>
+                    <li class="mypage-settings-item">
+                      <div class="mypage-settings-text">
+                        <p class="mypage-list-title">알림 설정</p>
+                        <p class="mypage-list-meta">이메일 / 문자 알림 수신 동의 설정</p>
+                      </div>
+                    </li>
+                    <li class="mypage-settings-item">
+                      <div class="mypage-settings-text">
+                        <p class="mypage-list-title">보안 설정</p>
+                        <p class="mypage-list-meta">비밀번호 변경, 로그인 이력 확인</p>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+        </div>
       </main>
+
+      <!-- ================= 모달 ================= -->
+      <div class="mypage-modal-backdrop" id="mypage-modal">
+        <div class="mypage-modal">
+          <button type="button" class="mypage-modal-close" aria-label="닫기">×</button>
+          <p class="mypage-modal-category" id="modal-category"></p>
+          <h2 class="mypage-modal-title" id="modal-title"></h2>
+          <p class="mypage-modal-meta" id="modal-meta"></p>
+          <p class="mypage-modal-desc">
+            실제 서비스에서는 이 화면에서 상세 내역, 상담 진행 상황, 관련 이미지 등을 확인할 수 있어요.
+          </p>
+        </div>
+      </div>
     </div>
 
     <script>
+      // 로그인 안 되어 있으면 로그인 페이지로 이동
       if (localStorage.getItem("auth") !== "1") {
         alert("로그인이 필요합니다.");
         location.href = "./login.html";
       }
 
+      // 헤더 로그인 영역 토글
       const guest = document.querySelector('[data-auth="guest"]');
       const user = document.querySelector('[data-auth="user"]');
       const authed = localStorage.getItem("auth") === "1";
@@ -169,12 +338,92 @@
         user.classList.toggle("hide", !authed);
       }
 
+      // 로그아웃 버튼
       const logoutBtn = document.getElementById("logout-btn");
       if (logoutBtn) {
         logoutBtn.addEventListener("click", () => {
           localStorage.removeItem("auth");
           alert("로그아웃 되었습니다.");
           location.href = "./index.html";
+        });
+      }
+
+      // 마이페이지 사이드 메뉴 / 패널 토글
+      const menuItems = document.querySelectorAll(".mypage-menu li");
+      const panels = document.querySelectorAll(".mypage-panel");
+
+      menuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const target = item.dataset.target;
+
+          menuItems.forEach((li) => li.classList.remove("is-active"));
+          item.classList.add("is-active");
+
+          panels.forEach((panel) => {
+            panel.classList.toggle("is-active", panel.dataset.panel === target);
+          });
+        });
+      });
+
+      // 모달 요소
+      const modalBackdrop = document.getElementById("mypage-modal");
+      const modalCategory = document.getElementById("modal-category");
+      const modalTitle = document.getElementById("modal-title");
+      const modalMeta = document.getElementById("modal-meta");
+      const modalCloseBtn = document.querySelector(".mypage-modal-close");
+
+      function openModal({ category, title, meta }) {
+        modalCategory.textContent = category || "";
+        modalTitle.textContent = title || "";
+        modalMeta.textContent = meta || "";
+        modalBackdrop.classList.add("is-open");
+      }
+
+      function closeModal() {
+        modalBackdrop.classList.remove("is-open");
+      }
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener("click", closeModal);
+      }
+
+      if (modalBackdrop) {
+        modalBackdrop.addEventListener("click", (e) => {
+          if (e.target === modalBackdrop) {
+            closeModal();
+          }
+        });
+      }
+
+      // "자세히" 버튼들 → 모달 열기
+      const detailButtons = document.querySelectorAll(".mypage-detail-btn");
+
+      detailButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const li = btn.closest(".mypage-item-with-action");
+          if (!li) return;
+
+          const category = btn.dataset.category || "";
+          const titleEl = li.querySelector(".mypage-list-title");
+          const metaEl = li.querySelector(".mypage-list-meta");
+
+          openModal({
+            category,
+            title: titleEl ? titleEl.textContent.trim() : "",
+            meta: metaEl ? metaEl.textContent.trim() : "",
+          });
+        });
+      });
+
+      // 계정 설정 전체 수정 버튼 → 모달 활용
+      const editAllBtn = document.querySelector(".mypage-edit-all-btn");
+      if (editAllBtn) {
+        editAllBtn.addEventListener("click", () => {
+          openModal({
+            category: "계정 설정",
+            title: "계정 정보 전체 수정",
+            meta: "기본 정보 · 알림 설정 · 보안 설정을 한 화면에서 관리할 수 있어요.",
+          });
         });
       }
     </script>
