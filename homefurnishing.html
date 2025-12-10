@@ -4,16 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The GamSung · 홈퍼니싱</title>
-    <!-- 공통 스타일 -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <!-- 홈퍼니싱 전용 스타일 -->
     <link rel="stylesheet" href="./css/homefurnishing.css" />
   </head>
 
   <body>
     <div id="wrap">
-      <!-- ================= 헤더 ================= -->
       <header class="hs-header">
         <div class="hs-top">
           <a class="hs-logo" href="./index.html">
@@ -48,9 +45,7 @@
         </nav>
       </header>
 
-      <!-- ================= 메인 ================= -->
       <main class="hf-container">
-        <!-- 히어로 영역 -->
         <section class="hf-hero">
           <img src="./img/imgs/benner/pexels-element5-1125135.jpg" alt="홈퍼니싱 배너" />
           <div class="hf-hero-text">
@@ -59,8 +54,7 @@
           </div>
         </section>
 
-        <!-- 카테고리 필터 버튼 -->
-        <section class="hf-category" aria-label="홈퍼니싱 스타일 필터">
+        <section class="hf-category">
           <button class="hf-btn active">전체</button>
           <button class="hf-btn">우드</button>
           <button class="hf-btn">모던</button>
@@ -69,7 +63,6 @@
           <button class="hf-btn">톤온톤</button>
         </section>
 
-        <!-- 카드 그리드 -->
         <section class="hf-grid" aria-label="홈퍼니싱 견적 목록">
           <!-- 1줄 -->
           <article class="hf-card" data-type="미니멀">
@@ -93,7 +86,7 @@
           <article class="hf-card" data-type="모던">
             <img src="./img/imgs/interior (11).jpg" alt="모던 다이닝 인테리어" />
             <h3>모던 다이닝 인테리어 패키지</h3>
-            <p>기본 견적 ₩1,800,000</p>
+            <p>기본 견적 ₩1,700,000</p>
           </article>
 
           <article class="hf-card" data-type="톤온톤">
@@ -167,18 +160,14 @@
       </main>
     </div>
 
-    <!-- ================= 스크립트 ================= -->
     <script>
-      // 로그인 상태 토글
       const authed = localStorage.getItem("auth") === "1";
       const guest = document.querySelector('[data-auth="guest"]');
       const user = document.querySelector('[data-auth="user"]');
-
       if (guest && user) {
         guest.classList.toggle("hide", authed);
         user.classList.toggle("hide", !authed);
       }
-
       const logoutBtn = document.getElementById("logout-btn");
       if (logoutBtn) {
         logoutBtn.addEventListener("click", () => {
@@ -186,31 +175,6 @@
           location.reload();
         });
       }
-
-      // 홈퍼니싱 카테고리 필터
-      const filterButtons = document.querySelectorAll(".hf-btn");
-      const cards = document.querySelectorAll(".hf-card");
-
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const category = button.textContent.trim();
-
-          // 버튼 active 토글
-          filterButtons.forEach((btn) => btn.classList.remove("active"));
-          button.classList.add("active");
-
-          // 카드 필터링
-          cards.forEach((card) => {
-            const type = card.dataset.type;
-
-            if (category === "전체" || type === category) {
-              card.style.display = "";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
-      });
     </script>
   </body>
 </html>
